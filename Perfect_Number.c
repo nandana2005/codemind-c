@@ -1,18 +1,16 @@
 #include<stdio.h>
-int main()
+void main()
 {
-int num,rem,sum=0,i;
-scanf("%d",&num);
-for(i=1;i<num;i++)
-{
-rem=num%i;
-if(rem==0)
-{
-sum=sum+i;
-}
-}
-if(sum==num)
-printf("True");
+int number, remainder, sum = 0, j;
+scanf("%d", &number);
+for(j = 1; j < number; j++)  {
+    remainder = number % j;
+       if (remainder == 0)  {
+                sum = sum + j;
+                       }
+      }
+if (sum == number)
+      printf("True");
 else
-printf("False");
+      printf("False");
 }
