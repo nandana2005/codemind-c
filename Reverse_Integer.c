@@ -1,13 +1,15 @@
-#include<stdio.h>
-int main()
-{
-    int q,r,s=0;
-    scanf("%d",&q);
-    while(q>0||q<0)
-    {
-        r=q%10;
-        s=s*10+r;
-        q=q/10;
-    }
-    printf("%d",s);
+#include <stdio.h>
+
+int main() {
+
+  int n, reverse = 0, remainder;
+  scanf("%d", &n);
+  while (n != 0) {
+    remainder = n % 10;
+    reverse = reverse * 10 + remainder;
+    n /= 10;
+  }
+  printf("%d", reverse);
+
+  return 0;
 }
