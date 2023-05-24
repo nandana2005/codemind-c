@@ -3,8 +3,9 @@ int main()
 {
     int i, number, flag=0;
     scanf("%d", &number);
+
     if(number == 1 || number == 0){
-        printf("%d is a Perfect Square.", number);
+        printf("True", number);
         flag=1;
     }
 
@@ -18,6 +19,7 @@ int main()
         }
     }
     if(flag == 0)
-        printf("False");
-}        
-        
+        printf("False", number);
+
+    return 0;
+}
