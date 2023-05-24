@@ -1,25 +1,42 @@
-#include<stdio.h>
+#include <stdio.h>
+ 
+int happyNumber(int);
+ 
 int main()
 {
-    int n,d,r=0;
-    scanf("%d%d",&n,&d);
-    while(n)
-    {
-        d=n%10;
-        n=n/10;
-        r+=d*d;
-        if(n==0&&r>9)
-        {
-            n=r;
-            r=0;
-        }
-    }
-    if(r==1)
-    {
-        printf("True");
-    }
-    else
-    {
-        printf("False");
-    }
+  int num = 82;
+ 
+ 
+  scanf("%d", &num);
+ 
+  int temp = num;
+ 
+  while (temp != 1 && temp != 4)
+  {
+    temp = happyNumber(temp);
+  }
+ 
+  //check for 1    
+  if (temp == 1)
+    printf("True", num);
+  else if (temp == 4)
+    printf("False", num);
+ 
+  return 0;
+}
+ 
+//user defined function
+int happyNumber(int num)
+{
+  int rem = 0, sum = 0;
+ 
+  //Calculation    
+  while (num > 0)
+  {
+    rem = num % 10;
+    sum = sum + (rem *rem);
+    num /= 10;
+  }
+ 
+  return sum;
 }
