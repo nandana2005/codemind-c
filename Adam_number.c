@@ -1,30 +1,36 @@
-#include<stdio.h>
-#include<math.h>
-int main()
-{
-    int n,rem,rev=0,a,sa,sr,rs=0;
-    scanf("%d",&n);
-    a=n;
-    while(n>0)
-    {
-        rem=n%10;
-        rev=rev*10+rem;
-        n=n/10;
-    }
-    sa=pow(a,2);
-    sr=pow(rev,2);
-    while(sr>0)
-    {
-        rem=sr%10;
-        rs=rs*10+rem;
-        sr=sr/10;
-    }
-    if(sa==rs)
-    {
-        printf("True");
-    }
-    else
-    {
-        printf("False");
-    }
-}
+#include <stdio.h>  
+#include <math.h>  
+  
+int reverse(int num)  
+{  
+    int rev = 0;  
+    while(num > 0)  
+    {  
+        rev = rev * 10 + num % 10;  
+        num = num / 10;  
+    }  
+    return rev;  
+}  
+  
+int isAdamNumber(int num)  
+{  
+    int sq = num * num;  
+    int rev = reverse(num);  
+    int rev_sq = rev * rev;  
+    int rev_rev_sq = reverse(rev_sq);  
+    if(sq == rev_rev_sq)  
+        return 1;  
+    else  
+        return 0;  
+}  
+  
+int main()  
+{  
+    int num;  
+    scanf("%d", &num);  
+    if(isAdamNumber(num))  
+        printf("True", num);  
+    else  
+        printf("False", num);  
+    return 0;  
+}  
