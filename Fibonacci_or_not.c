@@ -1,7 +1,6 @@
-#include <stdio.h>
+ #include <stdio.h>
   int main() {
         int data, num1 = 0, num2 = 1, temp, flag = 0;
-
         scanf("%d", &data);
 
         /* 0 and 1 are fibonacci numbers */
