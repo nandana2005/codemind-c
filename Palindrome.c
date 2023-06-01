@@ -15,7 +15,7 @@ int main() {
     if (original == reversed)
         printf("True", original);
     else
-        printf("False");
+        printf("False", original);
 
     return 0;
 }
