@@ -5,8 +5,6 @@ int happyNumber(int);
 int main()
 {
   int num = 82;
- 
- 
   scanf("%d", &num);
  
   int temp = num;
