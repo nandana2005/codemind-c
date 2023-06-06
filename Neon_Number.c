@@ -1,17 +1,22 @@
 #include<stdio.h>
-int main(){
-    int n,sq,sum=0,d;
-    scanf("%d",&n);
-    sq=n*n;
-    while(sq){
-        d=sq%10;
-        sum+=d;
-        sq=sq/10;
+int main()
+{
+    int num,digit,sum=0,square;
+    scanf("%d",&num);
+    square=num*num;
+    while(square!=0)
+    {
+       digit=square%10;
+       sum += digit;
+       square = square/10;
     }
-    if(n==sum){
+    if(sum==num)
+    {
         printf("Neon Number");
     }
-    else{
+    else
+    {
         printf("Not Neon Number");
     }
 }
+    
