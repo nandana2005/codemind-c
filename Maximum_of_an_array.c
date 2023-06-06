@@ -1,21 +1,18 @@
-#include <stdio.h>
-int main() {
-  int n;
-  int arr[100];
-  scanf("%d", &n);
-
-  for (int i = 0; i < n; ++i) {
-    scanf("%d", &arr[i]);
-  }
-
-  // storing the largest number to arr[0]
-  for (int i = 1; i < n; ++i) {
-    if (arr[0] < arr[i]) {
-      arr[0] = arr[i];
+#include<stdio.h>
+int main()
+{
+    int n,i,max;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        max=a[0];
     }
-  }
-
-  printf("%d", arr[0]);
-
-  return 0;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]>max)
+        max=a[i];
+    }
+    printf("%d",max);
 }
