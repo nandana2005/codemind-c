@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int a[100],n,o=0,e=0,i;
+    int n,i,c=0;
     scanf("%d",&n);
+    int a[n];
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
@@ -11,15 +12,13 @@ int main()
     {
         if(a[i]%2!=0)
         {
-            o+=1;
+            c++;
         }
     }
-    if(o<=2)
-    {
+    if(c<=2){
         printf("YES");
     }
-    else
-    {
+    else{
         printf("NO");
     }
 }
